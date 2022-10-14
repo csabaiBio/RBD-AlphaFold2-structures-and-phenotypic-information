@@ -1,39 +1,53 @@
 # RBD-AlphaFold2-structures-and-phenotypic-information
 
-This repository is provded alongside AlfaFold2 data for 
+### This repository is provded alongside AlphaFold2 data found at: href{https://figshare.com/projects/SARS-CoV-2_RBD_single_mutant_AlphaFold2_structures/150089} The scripts are presented to reproduce all reasults in the paper titled: "SARS-CoV-2 RBD deep mutational AlphaFold2 structures carry phenotypic information"
 
-The scripts to reproduce figure 1 from the paper:
+# Data structure:
 
-## To train the Resnet50: 
+FASTA
 
-Prepare data:
+- wuahn
+- alpha 
+- beta
+- delta
+- eta
+- omicronBA1
+- omicronBA2
+
+structures
+
+- wuahn
+- alpha 
+- beta
+- delta
+- eta
+- omicronBA1
+- omicronBA2
+
+
+
+# Download and unzip the data running:
+`./data_prepare.sh`
+
+# To run CNN experements: 
+### 1. Prepare data:
 `CNN_training/generate_adj_files.ipynb`
-Create 5 fold splits:
+### 2. Create 5 fold splits:
 `CNN_training/5_fold_split.ipynb`
-Train and test Resnet50 on created splits for each variant:
+### 3. Train and test Resnet50 on created splits for each variant:
 `python3 CNN_training/resnet_adjmat.py`
 
-## To run the XGBoost experements:
-
-Prepare FASTA and Adjacency matrix data:
-`python3 multivariant_embedding_creation.py`
-Train GXBoost classifier for FASTA and Adjacency matrix data 
-`python3 XGBoost_methods_output.py`
-To Clean the spike protein data from: 
+## To Clean the spike protein data from: 
 `python3 trimer_to_RBD.py`
 
-## To create figures for the paper:
+# To create figures for the paper:
 
-### Classification figure:
-`present_predictions.ipynb`
+# Scripts to create "Pseudo-complex"
 
-### PCA plot of the FASTA files:
-`fasta_PCA/PCA_run.ipynb`
+# Scripts to create PQR files
 
-### Linear Model
-
-#### ACE2 prediction
-`dependance_of_muts_ACE2.ipynb`
-
-#### RBD expressiobn prediction
-`dependance_of_muts_Expression.ipynb`
+## FoldX RBD protein expression prediction experement.
+### Run experement with foldX software installed.
+`data_release_paper/foldX_stability/foldx_expression_prediction.py`
+### Create figure
+`expression_foldx_analysis.ipynb`
