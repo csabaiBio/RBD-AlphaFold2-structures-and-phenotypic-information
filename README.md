@@ -1,33 +1,35 @@
 # RBD-AlphaFold2-structures-and-phenotypic-information
 
-### This repository is provded alongside AlphaFold2 data found at: href{https://figshare.com/projects/SARS-CoV-2_RBD_single_mutant_AlphaFold2_structures/150089} The scripts are presented to reproduce all reasults in the paper titled: "SARS-CoV-2 RBD deep mutational AlphaFold2 structures carry phenotypic information"
+## This repository is provded alongside AlphaFold2 data found at: 
+### https://figshare.com/projects/SARS-CoV-2_RBD_single_mutant_AlphaFold2_structures/150089 
 
-# Data structure:
+#### The scripts are presented to reproduce all reasults in the paper titled: "SARS-CoV-2 RBD deep mutational AlphaFold2 structures carry phenotypic information"
 
-FASTA
+# Getting started. 
+## Download and unzip the data running (for linux/mac).
+### This data can also be downloaded manually.
 
-- wuahn
-- alpha 
-- beta
-- delta
-- eta
-- omicronBA1
-- omicronBA2
-
-structures
-
-- wuahn
-- alpha 
-- beta
-- delta
-- eta
-- omicronBA1
-- omicronBA2
-
-
-
-# Download and unzip the data running:
 `./data_prepare.sh`
+
+# Data structure created:
+
+## FASTA
+- wuahn
+- alpha 
+- beta
+- delta
+- eta
+- omicronBA1
+- omicronBA2
+
+## Structures
+- wuahn
+- alpha 
+- beta
+- delta
+- eta
+- omicronBA1
+- omicronBA2
 
 # To run CNN experements: 
 ### 1. Prepare data:
