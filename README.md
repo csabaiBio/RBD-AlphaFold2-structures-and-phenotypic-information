@@ -19,8 +19,8 @@
 - beta
 - delta
 - eta
-- omicronBA1
-- omicronBA2
+- omicron_ba1
+- omicron_ba2
 
 ## Structures
 - wuahn
@@ -28,8 +28,19 @@
 - beta
 - delta
 - eta
-- omicronBA1
-- omicronBA2
+- omicron_ba1
+- omicron_ba2
+
+# Simple statistics and antibody escape plots notebook.
+`../antibody_escape/antibody_escape_vs_structuraldistortion.ipynb`
+
+# Wuhan generalization experemnt:
+`cd wuhan_generalization_experements`
+### then to create all embeddings and run random forrest classifier experement.
+`./wuhan_generalization.sh`
+### Then to visualise reasults;
+`../wuhan_generalization_experements/RF_generalisation_plot.ipynb`
+
 
 # To run CNN experements: 
 ### 1. Prepare data:

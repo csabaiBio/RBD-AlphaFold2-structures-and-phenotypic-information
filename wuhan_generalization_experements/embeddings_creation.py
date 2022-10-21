@@ -198,10 +198,10 @@ def main():
 
     variants_names = {
         "Wuhan-Hu-1_v2": "Wuhan-Hu-1_v2",
-        "N501Y": "Alpha", 
+        "Alpha": "Alpha", 
         "Beta": "Beta",
         "Delta": "Delta",
-        "E484K": "Eta",
+        "Eta": "Eta",
         "Omicron_BA1":"Omicron_BA1",
         "Omicron_BA2":"Omicron_BA2"
     }
@@ -223,25 +223,22 @@ def main():
     omicron_ba2 = scores_df.loc[scores_df["target"] == "Omicron_BA2"]    
 
     experemental_list = [wuhan,alpha,beta,delta,eta,omicron_ba1,omicron_ba2]
-    
-    # Make these relative and matching then way we unzip from the data prep script.
-    
-    wuhan_pdb_path = "../Wuhan_RBDs/structures/Wuhan-Hu-1_v2"
-    alpha_pdb_path = "../Wuhan_RBDs/structures/Alpha"
-    beta_pdb_path = "../Wuhan_RBDs/structures/Beta"
-    delta_pdb_path = "../Wuhan_RBDs/structures/Delta"
-    eta_pdb_path = "../Wuhan_RBDs/structures/Eta"
-    omicron_ba1_pdb_path = "../Wuhan_RBDs/structures/Omicron_BA1"   
-    omicron_ba2_pdb_path = "../Wuhan_RBDs/structures/OmicronBA2_RBD_DMS_PDB/OmicronBA2_aligned"
+        
+    wuhan_pdb_path = "../structures/wuhan"
+    alpha_pdb_path = "../structures/alpha"
+    beta_pdb_path = "../structures/beta"
+    delta_pdb_path = "../structures/delta"
+    eta_pdb_path = "../structures/eta"
+    omicron_ba1_pdb_path = "../structures/omicron_ba1"   
+    omicron_ba2_pdb_path = "../structures/omicron_ba2"
    
-
-    wuhan_FASTA_path = "../Fasta_files_RBD/wuhan_RBD"
-    alpha_FASTA_path = "../Fasta_files_RBD/alpha_RBD"
-    beta_FASTA_path = "../Fasta_files_RBD/beta_RBD"
-    delta_FASTA_path = "../Fasta_files_RBD/delta_RBD"
-    eta_FASTA_path = "../Fasta_files_RBD/eta_RBD"
-    omicron_ba1_FASTA_path = "../Fasta_files_RBD/omicron_ba2_RBD"
-    omicron_ba2_FASTA_path = "../Fasta_files_RBD/omicron_ba2_RBD" 
+    wuhan_FASTA_path = "../FASTA/wuhan"
+    alpha_FASTA_path = "../FASTA/alpha"
+    beta_FASTA_path = "../FASTA/beta"
+    delta_FASTA_path = "../FASTA/delta"
+    eta_FASTA_path = "../FASTA/eta"
+    omicron_ba1_FASTA_path = "../FASTA/omicron_ba1"
+    omicron_ba2_FASTA_path = "../FASTA/omicron_ba2" 
 
     
     pdb_list = [wuhan_pdb_path,alpha_pdb_path,beta_pdb_path,delta_pdb_path,eta_pdb_path,omicron_ba1_pdb_path,omicron_ba2_pdb_path]
@@ -251,15 +248,14 @@ def main():
 
     for varient_measurements,PDB_files,FASTA_files,varient_name in zip(experemental_list,pdb_list,FASTA_list,varient_names):
         
-        if varient_name == 'omicron_ba2':
-            print(varient_name)
-            print("One hot encoding")
-            one_hot_encode(FASTA_files,varient_measurements,varient_name)
-            print("Adj encoding")
-            adj_encoding(PDB_files,varient_measurements,varient_name)
-            # print("ESM encoding")
-            # ESM_generate(model,batch_converter,FASTA_files,varient_measurements,varient_name) #only run this later if required.
-            
+        print(varient_name)
+        print("One hot encoding")
+        one_hot_encode(FASTA_files,varient_measurements,varient_name)
+        print("Adj encoding")
+        adj_encoding(PDB_files,varient_measurements,varient_name)
+        # print("ESM encoding")
+        # ESM_generate(model,batch_converter,FASTA_files,varient_measurements,varient_name) #only run this later if required.
         
+    
 if __name__ == "__main__":
     main()
