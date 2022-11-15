@@ -38,29 +38,16 @@
 `cd wuhan_generalization_experements`
 ### then to create all embeddings and run random forrest classifier experement.
 `./wuhan_generalization.sh`
-### Then to visualise reasults;
+### Then to visualise reasults:
 `../wuhan_generalization_experements/RF_generalisation_plot.ipynb`
 
-
-# To run CNN experements: 
-### 1. Prepare data:
-`CNN_training/generate_adj_files.ipynb`
-### 2. Create 5 fold splits:
-`CNN_training/5_fold_split.ipynb`
-### 3. Train and test Resnet50 on created splits for each variant:
-`python3 CNN_training/resnet_adjmat.py`
-
-## To Clean the spike protein data from: 
-`python3 trimer_to_RBD.py`
-
-# To create figures for the paper:
-
-# Scripts to create "Pseudo-complex"
+# Umap reasults figure:
+`./projections/UMAP_all_vars_structs.ipynb`
 
 # Scripts to create PQR files
 
+
+
 ## FoldX RBD protein expression prediction experement.
 ### Run experement with foldX software installed.
-`data_release_paper/foldX_stability/foldx_expression_prediction.py`
-### Create figure
-`expression_foldx_analysis.ipynb`
+`./foldX_stability/foldx_expression_prediction.py`
