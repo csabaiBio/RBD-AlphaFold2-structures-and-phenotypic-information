@@ -45,7 +45,7 @@
 `./projections/UMAP_all_vars_structs.ipynb`
 
 # Scripts to create PQR files
-
+`./data_usage_scripts/PQR-APBS.ipynb`
 
 
 ## FoldX RBD protein expression prediction experement.
