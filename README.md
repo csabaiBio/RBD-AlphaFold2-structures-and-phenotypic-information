@@ -5,6 +5,9 @@
 
 #### The scripts are presented to reproduce all reasults in the paper titled: "SARS-CoV-2 RBD deep mutational AlphaFold2 structures carry phenotypic information"
 
+![](./reasults_figs/fig2b_ribbons.png)
+
+
 # Getting started. 
 ## Download and unzip the data running (for linux/mac).
 ### This data can also be downloaded manually.
@@ -31,6 +34,11 @@
 - omicron_ba1
 - omicron_ba2
 
+
+
+# Visualising structural distorition on mutation.
+`../data_usage_scripts/xyz_variation_at_position.ipynb`
+
 # Simple statistics and antibody escape plots notebook.
 `../antibody_escape/antibody_escape_vs_structuraldistortion.ipynb`
 
@@ -42,12 +50,13 @@
 `../wuhan_generalization_experements/RF_generalisation_plot.ipynb`
 
 # Umap reasults figure:
+### Visualise embeddings (representations) of the generated dataset.
 `./projections/UMAP_all_vars_structs.ipynb`
 
 # Scripts to create PQR files
+### Create PQR files for further downstream tasks.
 `./data_usage_scripts/PQR-APBS.ipynb`
 
-
 ## FoldX RBD protein expression prediction experement.
-### Run experement with foldX software installed.
+### Run FoldX stabvility function for all structures with foldX software installed.
 `./foldX_stability/foldx_expression_prediction.py`
