@@ -1,4 +1,5 @@
-# RBD-AlphaFold2-structures-and-phenotypic-information
+# SARS-CoV-2 RBD deep mutational AlphaFold2 structures carry phenotypic information.
+## Scientific data.
 
 ## This repository is provided alongside AlphaFold2 data found at: 
 ### https://figshare.com/projects/SARS-CoV-2_RBD_single_mutant_AlphaFold2_structures/150089 
@@ -32,10 +33,14 @@
 - omicron_ba1
 - omicron_ba2
 
+# Generated WT main varinats:
+### These are used for local distortion and alignment analysis.
+`../wt_pdbs`
+
 # Reproducing our data-set validation and useful notebooks:
 
 ## Visualizing structural distortion on mutation.
-### We investigate the mean deviation in distance each amino acid has for each each structure created. We observe that every mutation at a given position corresponds to a structural distortion at that position as well as some others in the structure.
+### We investigate the mean distortion in distance each amino acid has for each each structure created. We observe that every mutation at a given position corresponds to a structural distortion at that position as well as some others in the structure.
 `../data_usage_scripts/xyz_variation_at_position.ipynb`
 
 ## Simple statistics notebook.
