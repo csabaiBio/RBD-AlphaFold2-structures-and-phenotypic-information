@@ -1,12 +1,11 @@
 # RBD-AlphaFold2-structures-and-phenotypic-information
 
-## This repository is provded alongside AlphaFold2 data found at: 
+## This repository is provided alongside AlphaFold2 data found at: 
 ### https://figshare.com/projects/SARS-CoV-2_RBD_single_mutant_AlphaFold2_structures/150089 
 
-#### The scripts are presented to reproduce all reasults in the paper titled: "SARS-CoV-2 RBD deep mutational AlphaFold2 structures carry phenotypic information"
+#### The scripts are presented to reproduce all results in the paper titled: "SARS-CoV-2 RBD deep mutational AlphaFold2 structures carry phenotypic information"
 
 ![Superposition of single mutants](./reasults_figs/fig2b_ribbons.png)
-
 
 # Getting started. 
 ## Download and unzip the data running (for linux/mac).
@@ -33,28 +32,45 @@
 - omicron_ba1
 - omicron_ba2
 
+# Reproducing our data-set validation and useful notebooks:
 
-# Visualising structural distorition on mutation.
+## Visualizing structural distortion on mutation.
+### We investigate the mean deviation in distance each amino acid has for each each structure created. We observe that every mutation at a given position corresponds to a structural distortion at that position as well as some others in the structure.
 `../data_usage_scripts/xyz_variation_at_position.ipynb`
 
-# Simple statistics and antibody escape plots notebook.
-`../antibody_escape/antibody_escape_vs_structuraldistortion.ipynb`
+## Simple statistics notebook.
+### Exploring simple amino acid variation statistics.
+`../data_usage_scripts/aa_changes_vs_RMSD.ipynb`
+### Exploring the importance of the interface with respect to ACE2 binding values.
+`../interface_exploration/interface_importance.ipynb`
 
-# Wuhan generalization experiment:
+## Protein Disorder analysis notebook.
+### Here we investigate how pLDDT (b-factor) output of the AF2 files correlate with state-of-the-art disorder estimations.
+`../disorder_analysis/iupred_notebook-Analyses_mod.ipynb`
+
+## Wuhan generalization experiment:
 `cd wuhan_generalization_experiments`
 ### To create all embeddings and run random forest classifier experiment.
 `./wuhan_generalization.sh`
-### Then to visualise reasults with the notebook:
+### Then to visualize results with the notebook:
 `./RF_generalization_plot.ipynb`
 
-# Umap reasults figure:
-### Visualise embeddings (representations) of the generated dataset.
+## Umap results figure:
+### Visualize embeddings (representations) of the generated dataset.
 `./projections/UMAP_all_vars_structs.ipynb`
 
-# Scripts to create PQR files
+## Scripts to create PQR files
 ### Create PQR files for further downstream tasks.
 `./data_usage_scripts/PQR-APBS.ipynb`
 
-## FoldX RBD protein expression prediction experement.
-### Run FoldX stabvility function for all structures with foldX software installed.
+## FoldX RBD protein expression prediction experiment.
+### Run FoldX stability function for all structures with foldX software installed.
 `./foldX_stability/foldx_expression_prediction.py`
+
+## Validation that structures are correctly aligned.
+### We see a direct correlation between RMSD values in the 3D space and rotation invariant adjacency matrix space.
+`../rotation_analysis/MSE_vs_adjacency_dist.ipynb`
+
+## Antibody escape plots notebook.
+### Using the Bloom et al antibody escape calculator, we observe structural distortion correlates with antibody escape.
+`../antibody_escape/antibody_escape_vs_structuraldistortion.ipynb`
