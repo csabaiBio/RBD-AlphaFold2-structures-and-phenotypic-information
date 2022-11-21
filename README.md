@@ -34,9 +34,9 @@
 # Simple statistics and antibody escape plots notebook.
 `../antibody_escape/antibody_escape_vs_structuraldistortion.ipynb`
 
-# Wuhan generalization experemnt:
+# Wuhan generalization experiment:
 `cd wuhan_generalization_experements`
-### then to create all embeddings and run random forrest classifier experement.
+### then to create all embeddings and run random forest classifier experiment.
 `./wuhan_generalization.sh`
 ### Then to visualise reasults:
 `../wuhan_generalization_experements/RF_generalisation_plot.ipynb`
