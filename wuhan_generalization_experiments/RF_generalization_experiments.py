@@ -213,7 +213,7 @@ def main():
 
         # Save reasults to be plotted in RF_generalisation_plot
 
-        np.save("./reasults/RF_experement_reasults_"+str(i)+".npy",np.array([FASTA,ADJ,BASELINE]))
+        np.save("./reasults/RF_experiment_reasults_"+str(i)+".npy",np.array([FASTA,ADJ,BASELINE]))
     
 if __name__ == "__main__":
     main()

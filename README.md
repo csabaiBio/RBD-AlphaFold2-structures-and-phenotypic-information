@@ -5,14 +5,13 @@
 
 #### The scripts are presented to reproduce all reasults in the paper titled: "SARS-CoV-2 RBD deep mutational AlphaFold2 structures carry phenotypic information"
 
-![](./reasults_figs/fig2b_ribbons.png)
+![Superposition of single mutants](./reasults_figs/fig2b_ribbons.png)
 
 
 # Getting started. 
 ## Download and unzip the data running (for linux/mac).
-### This data can also be downloaded manually.
-
 `./data_prepare.sh`
+### This data can also be downloaded manually.
 
 # Data structure created:
 
@@ -35,7 +34,6 @@
 - omicron_ba2
 
 
-
 # Visualising structural distorition on mutation.
 `../data_usage_scripts/xyz_variation_at_position.ipynb`
 
@@ -43,11 +41,11 @@
 `../antibody_escape/antibody_escape_vs_structuraldistortion.ipynb`
 
 # Wuhan generalization experiment:
-`cd wuhan_generalization_experements`
-### then to create all embeddings and run random forest classifier experiment.
+`cd wuhan_generalization_experiments`
+### To create all embeddings and run random forest classifier experiment.
 `./wuhan_generalization.sh`
-### Then to visualise reasults:
-`../wuhan_generalization_experements/RF_generalisation_plot.ipynb`
+### Then to visualise reasults with the notebook:
+`./RF_generalization_plot.ipynb`
 
 # Umap reasults figure:
 ### Visualise embeddings (representations) of the generated dataset.

@@ -5,7 +5,7 @@ disorder_analysis/iupred_plddt/
 Fasta_files_RBD/
 interface_exploration/
 data_release_paper/SARS-CoV-2-RBD_DMS_Omicron/
-wuhan_generalization_experements/embeddings/
+wuhan_generalization_experiments/embeddings/
 Wuhan_RBDs/
 foldX_stability/foldx
 foldX_stability/stability_output
