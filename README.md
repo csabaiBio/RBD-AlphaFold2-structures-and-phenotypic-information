@@ -39,9 +39,14 @@
 
 # Reproducing our data-set validation and useful notebooks:
 
-## Visualizing structural distortion on mutation.
+## Visualizing structural distortion on mutation (mutation-distortion maps).
 ### We investigate the mean distortion in distance each amino acid has for each each structure created. We observe that every mutation at a given position corresponds to a structural distortion at that position as well as some others in the structure.
-`../data_usage_scripts/xyz_variation_at_position.ipynb`
+`../data_usage_scripts/mutation_distortion_maps.ipynb`
+
+### To create all of the maps for all of the mutant clusters:
+`../data_usage_scripts/mutation_distortion.py`
+### To view all of these maps.
+`../data_usage_scripts/all_mut_dist_maps.ipynb`
 
 ## Simple statistics notebook.
 ### Exploring simple amino acid variation statistics.

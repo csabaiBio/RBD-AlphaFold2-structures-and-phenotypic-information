@@ -13,3 +13,4 @@ FASTA/
 structures/
 data_usage_scripts/pos_df/
 ./projections/TSNE_all_vars_structs.ipynb
+alignment_trial/
