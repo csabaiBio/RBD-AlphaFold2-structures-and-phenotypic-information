@@ -52,7 +52,7 @@
 ### Exploring simple amino acid variation statistics.
 [`./data_usage_scripts/aa_changes_vs_RMSD.ipynb`](https://github.com/csabaiBio/RBD-AlphaFold2-structures-and-phenotypic-information/blob/main/data_usage_scripts/aa_changes_vs_RMSD.ipynb)
 ### Exploring the importance of the interface with respect to ACE2 binding values.
-[`./interface_exploration/interface_importance.ipynb`]()
+[`./interface_exploration/interface_importance.ipynb`](https://github.com/csabaiBio/RBD-AlphaFold2-structures-and-phenotypic-information/blob/main/interface_exploration/interface_importance.ipynb)
 
 ## Protein Disorder analysis notebook.
 ### Here we investigate how pLDDT (b-factor) output of the AF2 files correlate with state-of-the-art disorder estimations.
