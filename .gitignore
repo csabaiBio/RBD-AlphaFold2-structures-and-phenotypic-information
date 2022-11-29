@@ -3,7 +3,7 @@ baseline_model/
 CNN_training/
 disorder_analysis/iupred_plddt/
 Fasta_files_RBD/
-interface_exploration/
+# interface_exploration/
 data_release_paper/SARS-CoV-2-RBD_DMS_Omicron/
 wuhan_generalization_experiments/embeddings/
 Wuhan_RBDs/
