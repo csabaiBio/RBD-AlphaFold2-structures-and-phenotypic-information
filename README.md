@@ -10,7 +10,7 @@
 
 # Getting started. 
 ## Download and unzip the data running (for linux/mac).
-`./data_prepare.sh`
+[`./data_prepare.sh`](https://github.com/csabaiBio/RBD-AlphaFold2-structures-and-phenotypic-information/blob/main/data_prepare.sh)
 ### This data can also be downloaded manually.
 
 # Data structure created:
