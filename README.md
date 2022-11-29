@@ -35,7 +35,7 @@
 
 # Generated WT main varinats:
 ### These are used for local distortion and alignment analysis.
-`../wt_pdbs`
+[`../wt_pdbs`](https://github.com/csabaiBio/RBD-AlphaFold2-structures-and-phenotypic-information/tree/main/wt_pdbs)
 
 # Reproducing our data-set validation and useful notebooks:
 
@@ -71,7 +71,7 @@
 
 ## Scripts to create PQR files
 ### Create PQR files for further downstream tasks.
-`./data_usage_scripts/PQR-APBS.ipynb`
+`./APBS_and_PQR/PQR-APBS.ipynb`
 
 ## FoldX RBD protein expression prediction experiment.
 ### Run FoldX stability function for all structures with foldX software installed.

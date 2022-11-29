@@ -1,0 +1,67 @@
+#
+# Note that most of the comments here were taken from sample
+# input files that came with APBS.  You can find APBS at
+# http://agave.wustl.edu/apbs/
+# Note that APBS is GPL'd code.
+#
+read
+    mol pqr test_pqr_folder_insert_here
+    # read molecule 1
+end
+elec
+    mg-auto
+    dime   129 161 161  # number of find grid points
+                     # calculated by psize.py
+    cglen   74.431100 89.544100 109.310000 # coarse mesh lengths (A)
+    fglen   63.783000 72.673000 84.300000 # fine mesh lengths (A)
+                     # calculated by psize.py
+    cgcent -31.485500 29.941500 24.296000  # (could also give (x,y,z) form psize.py) #known center
+    fgcent -31.485500 29.941500 24.296000  # (could also give (x,y,z) form psize.py) #known center
+    lpbe               # solve the full nonlinear PBE with npbe
+    #lpbe            # solve the linear PBE with lpbe
+    bcfl sdh          # Boundary condition flag
+                     #  0 => Zero
+                     #  1 => Single DH sphere
+                     #  2 => Multiple DH spheres
+                     #  4 => Focusing
+                     #
+    #ion 1 0.000 2.0 # Counterion declaration:
+    ion charge  1 conc 0.150000 radius 2.000000     # Counterion declaration:
+    ion charge -1 conc 0.150000 radius 1.800000     # ion <charge> <conc (M)> <radius>
+    ion charge  2 conc 0.000000 radius 2.000000     # ion <charge> <conc (M)> <radius>
+    ion charge -2 conc 0.000000 radius 2.000000     # ion <charge> <conc (M)> <radius>
+    pdie 2.000000          # Solute dielectric
+    sdie 78.000000          # Solvent dielectric
+    chgm spl2          # Charge disc method
+                     # 0 is linear splines
+                     # 1 is cubic b-splines
+    mol 1            # which molecule to use
+    srfm smol        # Surface calculation method
+                     #  0 => Mol surface for epsilon;
+                     #       inflated VdW for kappa; no
+                     #       smoothing
+                     #  1 => As 0 with harmoinc average
+                     #       smoothing
+                     #  2 => Cubic spline 
+    srad 1.400000          # Solvent radius (1.4 for water)
+    swin 0.3         # Surface cubic spline window .. default 0.3
+    temp 310.000000          # System temperature (298.15 default)
+    sdens 10.000000         # Specify the number of grid points per square-angstrom to use in Vacc object. Ignored when srad is 0.0 (see srad) or srfm is spl2 (see srfm). There is a direct correlation between the value used for the Vacc sphere density, the accuracy of the Vacc object, and the APBS calculation time. APBS default value is 10.0.
+    #gamma 0.105      # Surface tension parameter for apolar forces (in kJ/mol/A^2)
+                     # only used for force calculations, so we don't care, but
+                     # it *used to be* always required, and 0.105 is the default
+    calcenergy no    # Energy I/O to stdout
+                     #  0 => don't write out energy
+                     #  1 => write out total energy
+                     #  2 => write out total energy and all
+                     #       components
+    calcforce no     # Atomic forces I/O (to stdout)
+                     #  0 => don't write out forces
+                     #  1 => write out net forces on molecule
+                     #  2 => write out atom-level forces
+    write pot dx test_apbs_folder_insert_here
+    # What to write .. this says write the potential in dx
+                     # format to a file.
+end
+quit
+
